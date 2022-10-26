@@ -8,6 +8,8 @@ import {renderChar, createChar, renderCharEdit, editChar, deleteChar, charToggle
 import {renderCont, createCont, renderContEdit, editCont, deleteCont, contToggleDone} from '../controllers/Cont.controller'
 import {renderEven, createEven, renderEvenEdit, editEven, deleteEven, evenToggleDone} from '../controllers/Even.controller'
 import {renderNot, createNot, renderNotEdit, editNot, deleteNot, notToggleDone} from '../controllers/Not.controller'
+import {renderUsuario, createUsuario, renderUsuarioEdit, editUsuario, deleteUsuario, usuarioToggleDone} from '../controllers/Usuario.controller'
+
 // CONTENEDORES
 const router = Router()
 
@@ -83,7 +85,14 @@ router.get('/nots/:id/edit', renderNotEdit);
 router.post('/nots/:id/edit', editNot);
 // ELIMINAR
 router.get('/nots/:id/delete', deleteNot);
-
+//---------------------------------------------------------------------------------------------------------------------------------
+router.get('/usuario', renderUsuario);
+router.post('/usuarios/add', createUsuario);
+// MODIFICAR
+router.get('/usuarios/:id/edit', renderUsuarioEdit);
+router.post('/usuarios/:id/edit', editUsuario);
+// ELIMINAR
+router.get('/usuarios/:id/delete', deleteUsuario);
 
 
 
@@ -116,6 +125,9 @@ router.get("/evento", (req,res) => {
 } );
 router.get("/noticia", (req,res) => {
     res.render("noticia")
+} );
+router.get("/usuarios", (req,res) => {
+    res.render("usuarios")
 } );
    //--
 
