@@ -1,0 +1,26 @@
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white rounded-0">
+    <h1>Actualiza una noticia</h1>
+    <form action="/nots/{{not._id}}/edit" method="POST">
+    
+    <div class="mb-3">
+        <input type="text" name="registro" placeholder="registro" value="{{not.registro}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    
+    <div class="mb-3">
+        <input type="text" name="nombreNoticia" placeholder="nombreNoticia" value="{{not.nombreNoticia}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+        <div class="mb-3">
+        <input type="text" name="link" placeholder="link" value="{{not.link}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    <div class="mb-3">
+        <input type="text" name="foto" placeholder="foto" value="{{not.foto}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    <button class="btn btn-primary">Modificar</button>
+</form>
+</div>
+        </div>
+    </div>
+</div>

@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 var hbs = create({
     layoutsDir: path.join(app.get("views"), "layouts"),
     partialsDir: path.join(app.get("views"), "partials"),
-    defaultLayout: "mainContenedor",
+    defaultLayout: "main",
     extname: ".hbs",
 })
 app.engine(".hbs",hbs.engine);

@@ -1,0 +1,41 @@
+<div class="card card-body rounded-0 bg-dark text-white">
+  <h3>Añade un Voluntariado</h3>
+  
+  <form action="/vols/add" method="POST">
+
+  <div>
+    <label form="registro"> Ingrese el registro:</label>
+    <input type="registro" name="registro" placeholder="registro" id="registro" class="form-control rounded-0 bg-dark text-white" />
+  </div>
+
+    <div>
+    <label form="nombreVoluntariado"> Ingrese el Nombre del Voluntariado:</label>
+    <input type="nombreVoluntariado" name="nombreVoluntariado" placeholder="nombreVoluntariado" id="nombreVoluntariado" class="form-control rounded-0 bg-dark text-white" />
+  </div>
+
+    <div>
+    <label form="organizacion"> Ingrese la organizacion:</label>
+    <input type="organizacion" name="organizacion" placeholder="organizacion" id="organizacion" class="form-control rounded-0 bg-dark text-white" />
+  </div>
+
+    <div>
+    <label form="descripcion"> Ingrese la descripcion:</label>
+    <textarea name="descripcion" rows="3" placeholder="Añada una descripción" class="form-control rounded-0 bg-dark text-white" ></textarea>
+   
+  </div>
+
+    <div>
+    <label form="linkEvento"> Ingrese el link:</label>
+    <input type="linkEvento" name="linkEvento" placeholder="linkEvento" id="linkEvento" class="form-control rounded-0 bg-dark text-white" />
+  </div>
+
+    <div>
+    <label form="foto"> Ingrese la foto:</label>
+    <input type="foto" name="foto" placeholder="foto" id="foto" class="form-control rounded-0 bg-dark text-white" />
+  </div>    
+
+
+  <button class="btn btn-primary btn-sm mt-2">Agregar</button>
+
+</form>
+</div>

@@ -1,0 +1,54 @@
+{{#if evens}}
+<div>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Registro</th>
+      <th>Nombre del Evento</th>
+      <th>Organizacion</th>
+      <th>Fecha del Evento</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each evens}}
+    <tr>
+      <td>{{@index}}</td>
+      <td>{{registro}}</td>
+      <td>{{nombreEvento}}</td>
+      <td>{{organizacion}}</td>
+      <td>{{fechaEvento}}</td>
+      <td>{{link}}</td>
+      <td>
+        <!--
+        {{#if done}}
+          <a href="/chars/{{_id}}/toggleDone" class="btn btn-dark">Incompleta</a>
+        {{else}}
+          <a href="/chars/{{_id}}/toggleDone" class="btn btn-success">Completa</a>-->
+        {{/if}}
+        <div class="md-4">
+          <a href="/evens/{{_id}}/edit" class="btn btn-info">Modificar</a>
+        </div>
+        <div class="mt-2 md-4">
+          <a href="/evens/{{_id}}/delete" class="btn btn-danger">Eliminar</a>
+        </div>
+        
+        
+      </td>
+    </tr>
+
+    {{/each}}
+  </tbody>
+</table>
+
+{{else}}
+    <div class="h-100 d-flex align-item-center justify-content-center">
+      <div class="text-center text-white">
+      <h1>No hay tareas</h1>
+      <img src="/icons/contenedor.png" width="200" height="200" alt="">
+    </div>
+    </div>
+{{/if}}
+
+</div>

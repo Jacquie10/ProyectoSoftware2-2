@@ -1,0 +1,34 @@
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white rounded-0">
+    <h1>Actualiza una tarea</h1>
+    <form action="/vols/{{vol._id}}/edit" method="POST">
+    
+    <div class="mb-3">
+        <input type="text" name="registro" placeholder="Registro" value="{{vol.registro}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    <div class="mb-3">
+        <input type="text" name="nombreVoluntariado" placeholder="nombreVoluntariado" value="{{vol.nombreVoluntariado}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    <div class="mb-3">
+        <input type="text" name="organizacion" placeholder="organizacion" value="{{vol.organizacion}}" class="form-control rounded-0 bg-dark text-white">
+    <div class="mb-3">
+        <textarea name="descripcion" rows="3" placeholder="Añada una descripción" class="form-control rounded-0 bg-dark text-white">
+        {{vol.descripcion}}
+    </textarea>
+    </div>
+        <div class="mb-3">
+        <input type="text" name="linkEvento" placeholder="linkEvento" value="{{vol.linkEvento}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+        <div class="mb-3">
+        <input type="text" name="foto" placeholder="foto" value="{{vol.foto}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+
+    
+    <button class="btn btn-primary">Modificar</button>
+</form>
+</div>
+        </div>
+    </div>
+</div>

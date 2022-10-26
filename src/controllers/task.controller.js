@@ -26,7 +26,7 @@ export const renderTaskEdit = async(req, res) =>
 {
     try {
         const task = await Task.findById(req.params.id).lean()
-        res.render('edit', {task})
+        res.render('edit/edit', {task})
     } catch (error) {
         console.log(error.message)
     }

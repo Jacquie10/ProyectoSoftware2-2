@@ -1,0 +1,55 @@
+{{#if ayus}}
+<div>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Contacto</th>
+      <th>Telefono</th>
+      <th>Correo</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each ayus}}
+    <tr>
+      <td>{{@index}}</td>
+      <td>{{contacto}}</td>
+      <td>{{telefono}}</td>
+      <td>{{correo}}</td>
+      <td>
+        <!--
+        {{#if done}}
+          <a href="/tasks/{{_id}}/toggleDone" class="btn btn-dark">Incompleta</a>
+        {{else}}
+          <a href="/tasks/{{_id}}/toggleDone" class="btn btn-success">Completa</a>-->
+        {{/if}}
+        <div class="md-4">
+          <a href="/ayus/{{_id}}/edit" class="btn btn-info">Modificar</a>
+        </div>
+        <div class="mt-2 md-4">
+          <a href="/ayus/{{_id}}/delete" class="btn btn-danger">Eliminar</a>
+        </div>
+        
+        
+      </td>
+    </tr>
+
+    {{/each}}
+  </tbody>
+</table>
+
+{{else}}
+    <div class="h-100 d-flex align-item-center justify-content-center">
+      <div class="text-center text-white">
+      <h1>No hay tareas </h1>
+     
+      <img src="/icons/contenedor.png" width="200" height="200" alt="">
+
+    </div>
+    </div>
+{{/if}}
+
+</div>
+
+

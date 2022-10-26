@@ -1,4 +1,4 @@
-import  app from './appContenedor'
+import  app from './app'
 import './database'
 import {PORT} from './config'
 
