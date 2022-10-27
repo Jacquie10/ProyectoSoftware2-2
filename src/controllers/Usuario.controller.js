@@ -9,6 +9,16 @@ export const renderUsuario = async (req, res) =>
     res.render('usuario', {usuarios : usuarios})
 }
 
+export const renderUsuarioPerfil = async (req, res) =>
+{
+    const perfiles = await Usuario.find({"password":"poiuyt","email":"reenma48@gmail.com"})
+
+   res.render('perfil', {perfiles : perfiles})
+}
+
+
+
+
 export const createUsuario = async (req, res) =>
 {
     try {

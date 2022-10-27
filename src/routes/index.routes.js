@@ -8,7 +8,7 @@ import {renderChar, createChar, renderCharEdit, editChar, deleteChar, charToggle
 import {renderCont, createCont, renderContEdit, editCont, deleteCont, contToggleDone} from '../controllers/Cont.controller'
 import {renderEven, createEven, renderEvenEdit, editEven, deleteEven, evenToggleDone} from '../controllers/Even.controller'
 import {renderNot, createNot, renderNotEdit, editNot, deleteNot, notToggleDone} from '../controllers/Not.controller'
-import {renderUsuario, createUsuario, renderUsuarioEdit, editUsuario, deleteUsuario, usuarioToggleDone} from '../controllers/Usuario.controller'
+import {renderUsuario, createUsuario, renderUsuarioEdit, editUsuario, deleteUsuario, renderUsuarioPerfil, usuarioToggleDone} from '../controllers/Usuario.controller'
 
 // CONTENEDORES
 const router = Router()
@@ -87,6 +87,7 @@ router.post('/nots/:id/edit', editNot);
 router.get('/nots/:id/delete', deleteNot);
 //---------------------------------------------------------------------------------------------------------------------------------
 router.get('/usuario', renderUsuario);
+router.get('/perfil', renderUsuarioPerfil);
 router.post('/usuarios/add', createUsuario);
 // MODIFICAR
 router.get('/usuarios/:id/edit', renderUsuarioEdit);
@@ -128,6 +129,9 @@ router.get("/noticia", (req,res) => {
 } );
 router.get("/usuarios", (req,res) => {
     res.render("usuarios")
+} );
+router.get("/perfil", (req,res) => {
+    res.render("perfil")
 } );
    //--
 

@@ -48,4 +48,23 @@
     </div>
 {{/if}}
 
+ <form action="/usuarios/{{usuario._id}}/edit" method="POST">
+    
+    <div class="mb-3">
+        <input type="text" name="nombre" placeholder="nombre" value="{{usuario.nombre}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    
+    <div class="mb-3">
+        <input type="text" name="email" placeholder="email" value="{{usuario.email}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+        <div class="mb-3">
+        <input type="password" name="password" placeholder="password" value="{{usuario.password}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    <button class="btn btn-primary">Modificar</button>
+</form>
+
+
+
+
+
 </div>

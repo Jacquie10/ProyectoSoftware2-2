@@ -1,0 +1,33 @@
+<div>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>N°</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Contraseña</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td value="{{perfiles.nombre}}" ></td>
+     
+      <td>{{perfiles.email}}</td>
+      <td>{{perfiles.password}}</td>
+    <td>
+        <div class="md-4">
+          <a href="/perfil/{{_id}}/edit" class="btn btn-info">Modificar</a>
+        </div>
+        <div class="mt-2 md-4">
+          <a href="/perfil/{{_id}}/delete" class="btn btn-danger">Eliminar</a>
+        </div>        
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+</div>
