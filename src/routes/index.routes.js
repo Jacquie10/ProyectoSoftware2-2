@@ -133,6 +133,9 @@ router.get("/usuarios", (req,res) => {
 router.get("/perfil", (req,res) => {
     res.render("perfil")
 } );
+router.get("/index", (req,res) => {
+    res.render("index")
+} );
    //--
 
 // TOGGLE DONE
