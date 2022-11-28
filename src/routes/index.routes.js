@@ -141,6 +141,14 @@ router.get("/perfiles", (req,res) => {
 router.get("/index", (req,res) => {
     res.render("index")
 } );
+
+router.get("/cerrarSesion", (req,res) => {
+    res.render("cerrarSesion")
+} );
+
+router.get("/solicitarAdmin", (req,res) => {
+    res.render("solicitarAdmin")
+} );
    //--
 
 // TOGGLE DONE
