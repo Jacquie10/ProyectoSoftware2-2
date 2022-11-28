@@ -1,0 +1,23 @@
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white rounded-0">
+    <h1>Actualiza tu perfil</h1>
+    <form action="/perfiles/6359a2e9b08a384afcbbc6b1/edit" method="POST">
+    
+    <div class="mb-3">
+        <input type="text" name="nombre" placeholder="nombre" value="{{usuario.nombre}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    
+    <div class="mb-3">
+        <input type="text" name="email" placeholder="email" value="{{usuario.email}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+        <div class="mb-3">
+        <input type="password" name="password" placeholder="password" value="{{usuario.password}}" class="form-control rounded-0 bg-dark text-white">
+    </div>
+    <button class="btn btn-primary">Modificar</button>
+</form>
+</div> 
+        </div>
+    </div>
+</div>

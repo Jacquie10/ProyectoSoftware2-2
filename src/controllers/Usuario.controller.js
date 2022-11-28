@@ -41,17 +41,36 @@ export const renderUsuarioEdit = async(req, res) =>
         console.log(error.message)
     }
 }
+export const renderPerfilEdit = async(req, res) =>
+{
+    try {
+        const usuario = await Usuario.findById(req.params.id).lean()
+        res.render('perfil', {usuario})
+    } catch (error) {
+        console.log(error.message)
+    }
+}
+
 
 export const editUsuario = async (req, res) =>
 {
     const {id} = req.params
+    console.log(req.params)
     await Usuario.findByIdAndUpdate(id, req.body)
     res.redirect('/usuario')
+}
+export const editPerfil = async (req, res) =>
+{
+    const {id} = req.params
+    console.log(req.params)
+    await Usuario.findByIdAndUpdate(id, req.body)
+    res.redirect('/perfil')
 }
 
 export const deleteUsuario = async (req, res) =>
 {
     const {id} = req.params
+
     await Usuario.findByIdAndDelete(id)
     res.redirect('/usuario')
 }

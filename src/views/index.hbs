@@ -50,9 +50,35 @@
               value="{{confirm_password}}"
             />
           </div>
-          <button class="btn btn-success btn-block">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Registrar
           </button>
+
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 style="color:#070707" class="modal-title" id="exampleModalLabel">Notificaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body"> 
+                    <h2 style="color:#070707">¿Desea Aceptar notificaciones?</h2>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerar</button>
+                    <button onclick="alertar('Usted acaba de aceptar las notificaciones');" type="button" class="btn btn-primary">Aceptar</button>
+                    <script type="text/javascript">
+                      function alertar(texto) {
+                        alert(texto);
+                      }
+                  </script>
+                                  
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </form>
       </div>
       <p class="text-center">Ya tienes una cuenta?
@@ -63,6 +89,10 @@
     </div>
   </div>
 </div>
+
+
+
+
 
 
 
