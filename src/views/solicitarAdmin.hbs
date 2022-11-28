@@ -1,0 +1,56 @@
+<div class="card card-body">
+    <div class="card card-body rounded-0 bg-dark text-white">
+  <h3>Añade un repositorio</h3>
+  
+  <form action="/repo/add" method="POST" class="mt-4">
+
+  <div>
+    <label form="registro"> Ingrese su nombre:</label>
+    <div class="mt-2">
+        <input type="text" name="nombre" placeholder="Nombre" id="nombre" class="form-control rounded-0 bg-dark text-white" />
+    </div>
+  </div>
+  <div class="mt-4">
+    <label form="title"> Ingrese su correo:</label>
+    <div class="mt-2">
+        <input type="text" name="correo" placeholder="Correo" id="correo" class="form-control rounded-0 bg-dark text-white" />
+    </div>
+  </div>
+  <div class="mt-4">
+    <label for="exampleFormControlTextarea1" class="form-label">Justificación</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+  </div>
+
+
+<!-- Button trigger modal -->
+<div class="mt-4">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Solicitar
+</button>
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="color:#070707">Se envío la solicitud al administrador, mantente atento a tu correo.</p>
+        <h6 style="color:#070707">¡Gracias por querer ser parte de nuestro team!</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+</div>
+</div>
+
+
